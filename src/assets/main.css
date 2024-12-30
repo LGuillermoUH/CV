@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  p, h1, h2, h3, h4 {
+    @apply text-t-color-4
+  }
+  .chip {
+    @apply cursor-pointer transition-all
+  }
+  .chip:hover {
+    @apply bg-t-color-3 shadow-lg;
+  }
+}
