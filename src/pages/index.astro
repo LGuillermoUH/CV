@@ -4,6 +4,8 @@ import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
 import "../assets/main.css";
 import { getCollection } from 'astro:content';
+import Content from '../layouts/Content.astro';
+import About from '../components/About.astro';
 const allBlogPosts = await getCollection('Technologies');
 console.log(allBlogPosts)
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -12,9 +14,16 @@ console.log(allBlogPosts)
 
 <Layout>
 	<Header></Header>
-	{
-		allBlogPosts.map((item, index) => {
-			 return <Chip title = {item.data.tittle}/>
-		})
-	}
+	
+	<Content>
+		<div slot="sidebar">
+
+			{
+				allBlogPosts.map((item, index) => {
+					 return <Chip title = {item.data.tittle}/>
+				})
+			}
+		</div>
+		<About></About>
+	</Content>
 </Layout>
