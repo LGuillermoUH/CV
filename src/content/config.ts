@@ -8,5 +8,19 @@ const Technologies = defineCollection({
         tittle: z.string()
     })
 });
-
-export const collections = {Technologies}
+const Experience = defineCollection({
+    loader: file("src/content/experience.json"),
+    schema: z.object({
+        id : z.number(),
+        company: z.string(),
+        img: z.string(),
+        experience: z.array( z.object({
+            id : z.number(),
+            title : z.string(),
+            duration: z.string(),
+            description: z.string(),
+            tags: z.array(z.string())
+        }))
+    })
+});
+export const collections = {Technologies, Experience}

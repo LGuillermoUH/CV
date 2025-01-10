@@ -1,0 +1,18 @@
+---
+import ExperienceImage from '../components/ExperienceImage.astro';
+import ExperienceContent from '../components/ExperienceContent.astro';
+
+const { company } = Astro.props;
+---
+
+<article class="flex p-4 rounded-lg bg-gray-800">
+    <div class="w-16">
+        <ExperienceImage imageUrl={company.data.logo} altText={company.data.name} />
+    </div>
+      
+  <section class="flex-1 space-y-2">
+    {company.data.experience.map((experience, expIndex) => (
+      <ExperienceContent experience={experience} key={`experience-${expIndex}`} />
+    ))}
+  </section>
+</article>

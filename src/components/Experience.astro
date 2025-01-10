@@ -1,66 +1,11 @@
 ---
-import ExperienceImage from '../components/ExperienceImage.astro';
+import { getCollection } from 'astro:content';
+import ExperienceList from '../components/ExperienceList.astro';
+
+const experienceData = await getCollection('Experience');
 ---
 
-<div class="container mx-auto bg-gray-900 text-white p-6">
-    <h2 class="text-xl font-bold border-b pb-2 mb-4">Experiencia</h2>
-    <div class="flex">
-      <div class="basis-16">
-        <ExperienceImage></ExperienceImage>
-      </div>     
-      <section class="flex-grow">       
-        <div class="p-4 mb-4">
-          <h3 class="text-lg font-semibold">Desarrollador Full Stack</h3>
-          <h4 class="text-sm text-gray-400">Compañía XYZ</h4>
-          <p class="text-xs text-gray-500">Enero 2022 - Presente</p>
-          <p>- Desarrollé y optimicé aplicaciones utilizando React y Node.js.</p>
-          <p>- Lideré un equipo de desarrollo de 5 personas.</p>
-        </div>
-        <div class="p-4 mb-4">
-          <h3 class="text-lg font-semibold">Desarrollador Full Stack</h3>
-          <h4 class="text-sm text-gray-400">Compañía XYZ</h4>
-          <p class="text-xs text-gray-500">Enero 2022 - Presente</p>
-          <p>- Desarrollé y optimicé aplicaciones utilizando React y Node.js.</p>
-          <p>- Lideré un equipo de desarrollo de 5 personas.</p>
-        </div>
-        <div class="p-4 mb-4">
-          <h3 class="text-lg font-semibold">Desarrollador Full Stack</h3>
-          <h4 class="text-sm text-gray-400">Compañía XYZ</h4>
-          <p class="text-xs text-gray-500">Enero 2022 - Presente</p>
-          <p>- Desarrollé y optimicé aplicaciones utilizando React y Node.js.</p>
-          <p>- Lideré un equipo de desarrollo de 5 personas.</p>
-        </div>
-      </section>
-    </div>
-    <div class="flex">
-      <div class="basis-16">
-        <ExperienceImage></ExperienceImage>
-      </div>     
-      <section class="flex-grow">       
-        <div class="p-4 mb-4">
-          <h3 class="text-lg font-semibold">Desarrollador Full Stack</h3>
-          <h4 class="text-sm text-gray-400">Compañía XYZ</h4>
-          <p class="text-xs text-gray-500">Enero 2022 - Presente</p>
-          <p>- Desarrollé y optimicé aplicaciones utilizando React y Node.js.</p>
-          <p>- Lideré un equipo de desarrollo de 5 personas.</p>
-        </div>
-        <div class="p-4 mb-4">
-          <h3 class="text-lg font-semibold">Desarrollador Full Stack</h3>
-          <h4 class="text-sm text-gray-400">Compañía XYZ</h4>
-          <p class="text-xs text-gray-500">Enero 2022 - Presente</p>
-          <p>- Desarrollé y optimicé aplicaciones utilizando React y Node.js.</p>
-          <p>- Lideré un equipo de desarrollo de 5 personas.</p>
-        </div>
-        <div class="p-4 mb-4">
-          <h3 class="text-lg font-semibold">Desarrollador Full Stack</h3>
-          <h4 class="text-sm text-gray-400">Compañía XYZ</h4>
-          <p class="text-xs text-gray-500">Enero 2022 - Presente</p>
-          <p>- Desarrollé y optimicé aplicaciones utilizando React y Node.js.</p>
-          <p>- Lideré un equipo de desarrollo de 5 personas.</p>
-        </div>
-      </section>
-    </div>
-    
-    </div>
-  </div>
-  
+<div class="mx-8 bg-gray-900 text-white">
+  <h2 class="text-xl font-bold border-b pb-2 mb-4">Experiencia</h2>
+  <ExperienceList companies={experienceData} />
+</div>

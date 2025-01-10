@@ -6,7 +6,10 @@ export default {
 			't-color-1': "#181C14",
 			't-color-2': "#3C3D37",
 			't-color-3': "#697565",
-			't-color-4': "#ECDFCC"
+			't-color-4': "#ECDFCC",
+			't-text-h1': "#F5E9D8",
+			't-text-h2': "#B0B3B8",
+			't-text-h3': "#6C6F74"
 		},
 		extend: {},
 	},

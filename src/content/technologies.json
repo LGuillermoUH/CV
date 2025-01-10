@@ -1,18 +1,150 @@
 [
     {
-        "id": "Front-1",
+        "id": "Skill-1",
         "tittle": "React"
     },
     {
-        "id": "Front-2",
-        "tittle": "TailwindCss"
+        "id": "Skill-2",
+        "tittle": "Google Libraries"
     },
     {
-        "id": "Front-3",
-        "tittle": "TailwindCss"
+        "id": "Skill-3",
+        "tittle": "Microsoft Entra"
     },
     {
-        "id": "Front-4",
-        "tittle": "TailwindCss"
+        "id": "Skill-4",
+        "tittle": "Frontend Development"
+    },
+    {
+        "id": "Skill-5",
+        "tittle": "React"
+    },
+    {
+        "id": "Skill-6",
+        "tittle": "Tailwind"
+    },
+    {
+        "id": "Skill-7",
+        "tittle": "Node.js"
+    },
+    {
+        "id": "Skill-8",
+        "tittle": "Express"
+    },
+    {
+        "id": "Skill-9",
+        "tittle": "Sequelize"
+    },
+    {
+        "id": "Skill-10",
+        "tittle": "Excel.js"
+    },
+    {
+        "id": "Skill-11",
+        "tittle": "MSAL React"
+    },
+    {
+        "id": "Skill-12",
+        "tittle": "Full Stack Development"
+    },
+    {
+        "id": "Skill-13",
+        "tittle": ".NET"
+    },
+    {
+        "id": "Skill-14",
+        "tittle": "Minimal API"
+    },
+    {
+        "id": "Skill-15",
+        "tittle": "Entity Framework"
+    },
+    {
+        "id": "Skill-16",
+        "tittle": "Factory Pattern"
+    },
+    {
+        "id": "Skill-17",
+        "tittle": "Builder Pattern"
+    },
+    {
+        "id": "Skill-18",
+        "tittle": "Azure Blob Storage"
+    },
+    {
+        "id": "Skill-19",
+        "tittle": "Application Insights"
+    },
+    {
+        "id": "Skill-20",
+        "tittle": "Service Bus"
+    },
+    {
+        "id": "Skill-21",
+        "tittle": "Azure Functions"
+    },
+    {
+        "id": "Skill-22",
+        "tittle": "Backend Development"
+    },
+    {
+        "id": "Skill-23",
+        "tittle": "Cosmos DB"
+    },
+    {
+        "id": "Skill-24",
+        "tittle": "SQL"
+    },
+    {
+        "id": "Skill-25",
+        "tittle": "CQRS"
+    },
+    {
+        "id": "Skill-26",
+        "tittle": "Entity Framework"
+    },
+    {
+        "id": "Skill-27",
+        "tittle": "MediatR"
+    },
+    {
+        "id": "Skill-28",
+        "tittle": "Backend Development"
+    },
+    {
+        "id": "Skill-29",
+        "tittle": "C#"
+    },
+    {
+        "id": "Skill-30",
+        "tittle": "REST APIs"
+    },
+    {
+        "id": "Skill-31",
+        "tittle": "FluentValidation"
+    },
+    {
+        "id": "Skill-32",
+        "tittle": "Backend Development"
+    },
+    {
+        "id": "Skill-33",
+        "tittle": "Nest.js"
+    },
+    {
+        "id": "Skill-34",
+        "tittle": "TypeScript"
+    },
+    {
+        "id": "Skill-35",
+        "tittle": "Azure Blob Storage"
+    },
+    {
+        "id": "Skill-36",
+        "tittle": "Excel Generation"
+    },
+    {
+        "id": "Skill-37",
+        "tittle": "Backend Development"
     }
 ]
