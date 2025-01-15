@@ -1,0 +1,49 @@
+---
+// No es necesario definir variables aquí, ya que las manejaremos en el script del cliente.
+---
+
+<!-- Div para el toast, inicialmente oculto -->
+<div 
+  id="toast"
+  class="fixed right-0 bottom-6 transform
+        rounded-lg
+         px-4 py-2 mr-2 bg-t-color-2 border border-t-color-4 text-t-color-4
+         shadow-lg transition-all duration-300 opacity-0 translate-y-4 pointer-events-none"
+>
+  <!-- El mensaje del toast se establecerá dinámicamente -->
+</div>
+
+<!-- Script para manejar la lógica del toast -->
+<script>
+  // Espera a que el DOM esté completamente cargado
+  document.addEventListener('DOMContentLoaded', () => {
+    const toast = document.getElementById('toast');
+    let timerId = null;
+
+    // Función para mostrar el toast con un mensaje y duración específicos
+    function showToast(message, duration = 3000) {
+      // Establece el mensaje del toast
+      toast.textContent = message;
+      // Muestra el toast
+      toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      // Si hay un temporizador activo, lo limpia
+      if (timerId) {
+        clearTimeout(timerId);
+      }
+
+      // Oculta el toast después de la duración especificada
+      timerId = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+      }, duration);
+    }
+
+    // Escucha el evento personalizado 'show-toast' en el documento
+    document.addEventListener('show-toast', (event) => {
+      const { message, duration } = event.detail || {};
+      showToast(message, duration);
+    });
+  });
+</script>

@@ -32,17 +32,27 @@
 
 
 <script define:vars={{ href, type, id }}>
-    // Sólo asignamos el evento si es de tipo copiar
-    if (type) {
-      const button = document.getElementById(id);
-  
-      button?.addEventListener('click', async () => {
-        try {
-          await navigator.clipboard.writeText(href);
-          alert("¡Texto copiado al portapapeles!");
-        } catch (error) {
-          console.error("Error al copiar el texto: ", error);
-        }
-      });
-    }
+  if (type) {
+    const button = document.getElementById(id);
+
+    button?.addEventListener('click', async () => {
+      try {
+        // Copiamos texto al portapapeles
+        await navigator.clipboard.writeText(href);
+
+        // MOSTRAMOS EL TOAST DIRECTO (sin buscar "#toast")
+        const event = new CustomEvent('show-toast', {
+          detail: {
+            message: '¡Texto copiado con éxito!',
+            duration: 3000,
+          },
+        });
+        document.dispatchEvent(event);
+
+      } catch (error) {
+        console.error("Error al copiar el texto: ", error);
+      }
+    });
+  }
 </script>
+

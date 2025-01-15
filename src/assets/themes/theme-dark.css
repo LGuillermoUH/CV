@@ -1,0 +1,11 @@
+html[data-theme="dark"] {
+    --color-primary: #868e98;
+    --color-secondary: #646e77;
+    --color-accent: #434d57;
+    --color-background: #212c36;
+    --color-surface: #000b15;
+    --color-text-title: #FFFFFF;
+    --color-text-subtitle: #D1D5DB;
+    --color-text-body: #868e98;
+  }
+  

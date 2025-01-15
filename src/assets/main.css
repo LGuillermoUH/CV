@@ -1,18 +1,19 @@
+@import 'themes/theme-dark.css';
+@import 'themes/theme-light.css';
+
+/* Otras reglas CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  html {
+    --color-primary: #4285f4;
+    --color-secondary: #34a853;
+    --color-buttons: #fbbc05;
+    --color-typography: #ea4335;
+  }
   body {
-    font-family: 'Onest Variable', sans-serif;
-  }
-  p, h1, h2, h3, h4 {
-    @apply text-t-color-4
-  }
-  .chip {
-    @apply cursor-pointer transition-all
-  }
-  .chip:hover {
-    @apply bg-t-color-3 shadow-lg;
+    @apply bg-background
   }
 }
