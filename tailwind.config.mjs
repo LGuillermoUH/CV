@@ -13,11 +13,17 @@ export default {
 		  'text-title': 'var(--color-text-title)',
 		  'text-subtitle': 'var(--color-text-subtitle)',
 		  'text-body': 'var(--color-text-body)',
+		  'button-background': 'var(--color-button-background)',
+		  'button-text': 'var(--color-button-text)',
+		  border: 'var(--color-border)',
+		  'link-active': 'var(--color-link-active)',
+		  'link-hover': 'var(--color-link-hover)',
+		  error: 'var(--color-error)',
+		  success: 'var(--color-success)',
 		},
 	  },
 	},
 	plugins: [
 	  require('@tailwindcss/typography'),
 	],
-  }
-  
+}

@@ -14,12 +14,12 @@ const { experience } = Astro.props;
 ---
 
 <div class="p-4 mb-4">
-    <h3 class="text-2xl sm:text-3xl font-bold text-t-text-h1 mb-2">{experience.title}</h3>
-    <h4 class="text-sm text-t-text-h2 mb-4">{experience.duration}</h4>
+    <h3 class="text-2xl sm:text-3xl font-bold text-text-title mb-1">{experience.title}</h3>
+    <h4 class="text-sm text-text-subtitle mb-1">{experience.duration}</h4>
     {
         experience.tags.map((item, index) => {
              return <Chip title = {item}/>
         })
     }
-    <p class="text-sm sm:text-base leading-relaxed text-t-color-4 mt-2">{experience.description}</p>
+    <p class="text-sm sm:text-base leading-relaxed text-text-body">{experience.description}</p>
 </div>

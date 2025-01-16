@@ -7,13 +7,16 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    --color-primary: #4285f4;
-    --color-secondary: #34a853;
-    --color-buttons: #fbbc05;
-    --color-typography: #ea4335;
-  }
   body {
     @apply bg-background
+  }
+  h1, h2, h3, h4, h4, p {
+    @apply text-text-title
+  }
+  .chip {
+    @apply font-medium border transition duration-300 cursor-pointer select-none bg-surface text-text-body border-border
+  }
+  .chip:hover {
+    @apply border-accent;
   }
 }

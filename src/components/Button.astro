@@ -12,20 +12,20 @@
     <button
       id={id}
       type="button"
-      class="text-t-color-4 flex border p-1 rounded-xl w-60"
+      class=" flex border border-text-title p-1 rounded-xl w-60"
     >
-      <Icon class="text-t-color-4 to-t-color-4 ml-2" />
-      <p class="pl-2">{content}</p>
+      <Icon class=" text-text-title ml-2" />
+      <p class="pl-2 text-text-title">{content}</p>
     </button>
   ) : (
   <a 
     href={href} 
     target="_blank"
     role="link"
-    class="text-t-color-4 flex border p-1 rounded-xl w-60"
+    class=" flex border border-text-title p-1 rounded-xl w-60"
     >
-        <Icon class="text-t-color-4 to-t-color-4 ml-2"/>
-        <p class="pl-2">{content}</p>
+        <Icon class=" text-text-title ml-2"/>
+        <p class="pl-2 text-text-title">{content}</p>
 
     </a>
   )}
@@ -43,8 +43,8 @@
         // MOSTRAMOS EL TOAST DIRECTO (sin buscar "#toast")
         const event = new CustomEvent('show-toast', {
           detail: {
-            message: '¡Texto copiado con éxito!',
-            duration: 3000,
+            message: '¡Correo electronico copiado!',
+            duration: 1000,
           },
         });
         document.dispatchEvent(event);

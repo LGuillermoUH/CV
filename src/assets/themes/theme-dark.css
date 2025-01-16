@@ -1,11 +1,17 @@
 html[data-theme="dark"] {
-    --color-primary: #868e98;
-    --color-secondary: #646e77;
-    --color-accent: #434d57;
-    --color-background: #212c36;
-    --color-surface: #000b15;
-    --color-text-title: #FFFFFF;
-    --color-text-subtitle: #D1D5DB;
-    --color-text-body: #868e98;
-  }
-  
+  --color-primary: #EFFAFD; /* Azul pálido */
+  --color-secondary: #A0006D; /* Berenjena */
+  --color-accent: #88BFF9; /* Azul cielo */
+  --color-background: #1A2A3A; /* Azul noche */
+  --color-surface: #000B15; /* Negro profundo */
+  --color-text-title: #EFFAFD; /* Azul pálido */
+  --color-text-subtitle: #B0B0B0; /* Gris medio */
+  --color-text-body: #868E98; /* Gris claro */
+  --color-button-background: #A0006D; /* Berenjena */
+  --color-button-text: #EFFAFD; /* Azul pálido */
+  --color-border: #2F3E4F; /* Gris oscuro */
+  --color-link-active: #88BFF9; /* Azul cielo */
+  --color-link-hover: #FF7AAE; /* Rosa brillante */
+  --color-error: #FF4C4C; /* Rojo brillante */
+  --color-success: #3DBA87; /* Verde lima */
+}
