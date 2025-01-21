@@ -5,6 +5,8 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://LGuillermoUH.github.io',
+  base: 'CV',
   integrations: [tailwind()],
   experimental: {
     svg: true

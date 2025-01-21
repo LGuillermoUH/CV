@@ -11,12 +11,12 @@
     @apply bg-background
   }
   h1, h2, h3, h4, h4, p {
-    @apply text-text-title
+    @apply text-primary-text
   }
   .chip {
-    @apply font-medium border transition duration-300 cursor-pointer select-none bg-surface text-text-body border-border
+    @apply font-medium border transition duration-300 cursor-pointer select-none bg-background text-primary-text border-border
   }
   .chip:hover {
-    @apply border-accent;
+    @apply border-button-icon;
   }
 }

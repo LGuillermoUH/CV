@@ -1,17 +1,11 @@
 html[data-theme="light"] {
-  --color-primary: #4A8BDF; /* Azul real */
-  --color-secondary: #A0006D; /* Berenjena */
-  --color-accent: #88BFF9; /* Azul cielo */
-  --color-background: #EFFAFD; /* Azul pálido */
-  --color-surface: #FFFFFF; /* Blanco */
-  --color-text-title: #4A8BDF; /* Azul real */
-  --color-text-subtitle: #4A4A4A; /* Gris oscuro */
-  --color-text-body: #6B6B6B; /* Gris intermedio */
-  --color-button-background: #4A8BDF; /* Azul real */
-  --color-button-text: #FFFFFF; /* Blanco */
-  --color-border: #D9E2EC; /* Gris claro */
-  --color-link-active: #A0006D; /* Berenjena */
-  --color-link-hover: #88BFF9; /* Azul cielo */
-  --color-error: #FF6B6B; /* Rojo coral */
-  --color-success: #43D29E; /* Verde menta */
+  --color-background: #FFFFFF; /* Blanco para un fondo claro */
+  --color-border: #D3D6D8; /* Gris claro */
+  --color-button-text: #1A1A1A; /* Negro para texto visible en botones */
+  --color-button-text-inactive: #888D91; /* Gris medio para texto inactivo */
+  --color-button-icon: #007ACC; /* Azul brillante para íconos activos */
+  --color-button-icon-inactive: #9ACAFD; /* Azul claro para íconos inactivos */
+  --color-button-menu-icon: #4A4A4A; /* Gris oscuro para íconos de menú */
+  --color-primary-text: #1A1A1A; /* Negro para texto principal */
+  --color-secondary-text: #5A5F63; /* Gris intermedio para texto secundario */
 }

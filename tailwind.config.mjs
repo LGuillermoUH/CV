@@ -5,25 +5,20 @@ export default {
 	theme: {
 	  extend: {
 		colors: {
-		  primary: 'var(--color-primary)',
-		  secondary: 'var(--color-secondary)',
-		  accent: 'var(--color-accent)',
 		  background: 'var(--color-background)',
-		  surface: 'var(--color-surface)',
-		  'text-title': 'var(--color-text-title)',
-		  'text-subtitle': 'var(--color-text-subtitle)',
-		  'text-body': 'var(--color-text-body)',
-		  'button-background': 'var(--color-button-background)',
-		  'button-text': 'var(--color-button-text)',
 		  border: 'var(--color-border)',
-		  'link-active': 'var(--color-link-active)',
-		  'link-hover': 'var(--color-link-hover)',
-		  error: 'var(--color-error)',
-		  success: 'var(--color-success)',
+		  'button-text': 'var(--color-button-text)',
+		  'button-text-inactive': 'var(--color-button-text-inactive)',
+		  'button-icon': 'var(--color-button-icon)',
+		  'button-icon-inactive': 'var(--color-button-icon-inactive)',
+		  'button-menu-icon': 'var(--color-button-menu-icon)',
+		  'primary-text': 'var(--color-primary-text)',
+		  'secondary-text': 'var(--color-secondary-text)',
 		},
 	  },
 	},
 	plugins: [
 	  require('@tailwindcss/typography'),
 	],
-}
+  }
+  

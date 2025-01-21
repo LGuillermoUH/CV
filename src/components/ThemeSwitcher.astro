@@ -1,28 +1,40 @@
-<script>
-    if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('theme');
-      if (!savedTheme) {
-        localStorage.setItem('theme', 'dark');
-        document.querySelector("html")?.setAttribute("data-theme", 'dark');
-      } else{
-        document.querySelector("html")?.setAttribute("data-theme", savedTheme);
-      }
-    }
-    const button = document.getElementById("toggleTheme");
+<button
+  id="toggleTheme"
+  class="p-2 bg-primary-light dark:bg-primary rounded absolute right-0"
+>
+  <img id="theme-icon" class="h-5 w-5" src="/src/components/Icons/dark.svg" alt="Theme Icon" />
+</button>
 
-    button?.addEventListener('click', async () => {
-      const newTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
-      localStorage.setItem('theme', newTheme);
-      document.querySelector("html")?.setAttribute("data-theme", newTheme);
-    // Configuración inicial del tema
-    
-    })
-  </script>
-  
-  <button
-    id="toggleTheme"
-    class="p-2 bg-primary-light dark:bg-primary rounded"
-  >
-    <span id="theme-icon">🌞</span>
-  </button>
-  
+<script>
+  if (typeof window !== 'undefined') {
+    const savedTheme = localStorage.getItem('theme');
+    if (!savedTheme) {
+      localStorage.setItem('theme', 'dark');
+      document.querySelector("html")?.setAttribute("data-theme", 'dark');
+    } else {
+      document.querySelector("html")?.setAttribute("data-theme", savedTheme);
+    }
+  }
+
+  const button = document.getElementById("toggleTheme");
+  const themeIcon = document.getElementById("theme-icon");
+
+  // Cargar el SVG inicial basado en el tema
+  const initialTheme = localStorage.getItem('theme') || 'dark';
+  document.querySelector("html")?.setAttribute("data-theme", initialTheme);
+
+  themeIcon.src = initialTheme === 'dark'
+    ? '/src/components/Icons/dark.svg'
+    : '/src/components/Icons/light.svg';
+
+  // Cambiar tema y actualizar el SVG
+  button?.addEventListener('click', () => {
+    const newTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('theme', newTheme);
+    document.querySelector("html")?.setAttribute("data-theme", newTheme);
+
+    themeIcon.src = newTheme === 'dark'
+      ? '/src/components/Icons/dark.svg'
+      : '/src/components/Icons/light.svg';
+  });
+</script>

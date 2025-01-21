@@ -1,4 +1,12 @@
 ---
+import Button from "./Button.astro";
+import Email from "./Icons/Email.astro";
+import Github from "./Icons/Github.astro";
+
 
 ---
 
+<div class="flex justify-start space-x-3 mx-8">
+    <Button Icon={Github} href="https://github.com/LGuillermoUH"/>
+    <Button Icon={Email} href="luisguillermourenahernandez@gmail.com" id="email" type={true}/>
+</div>

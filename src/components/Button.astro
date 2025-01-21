@@ -2,30 +2,25 @@
     interface Props {
         href: string;
         Icon: any;
-        content: string;
         type?: boolean;
         id?: string
     }
-    const {href, Icon, content, type = false, id = "actionButton"} = Astro.props as Props
+    const {href, Icon, type = false, id = "actionButton"} = Astro.props as Props
 ---
 {type ? (
     <button
       id={id}
       type="button"
-      class=" flex border border-text-title p-1 rounded-xl w-60"
     >
-      <Icon class=" text-text-title ml-2" />
-      <p class="pl-2 text-text-title">{content}</p>
+      <Icon class=" text-button-icon mr-2" />
     </button>
   ) : (
   <a 
     href={href} 
     target="_blank"
     role="link"
-    class=" flex border border-text-title p-1 rounded-xl w-60"
     >
-        <Icon class=" text-text-title ml-2"/>
-        <p class="pl-2 text-text-title">{content}</p>
+        <Icon class=" text-button-icon mr-2"/>
 
     </a>
   )}
