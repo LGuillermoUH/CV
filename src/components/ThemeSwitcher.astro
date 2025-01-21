@@ -24,8 +24,8 @@
   document.querySelector("html")?.setAttribute("data-theme", initialTheme);
 
   themeIcon.src = initialTheme === 'dark'
-    ? '/src/components/Icons/dark.svg'
-    : '/src/components/Icons/light.svg';
+    ? './dark.svg'
+    : './light.svg';
 
   // Cambiar tema y actualizar el SVG
   button?.addEventListener('click', () => {
