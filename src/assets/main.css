@@ -1,12 +1,62 @@
-@import 'themes/theme-dark.css';
-@import 'themes/theme-light.css';
+html[data-theme="dark"] {
+  --color-background: #000000; /* Azul noche */
+  --color-border: rgb(47, 51, 54); /* Gris oscuro */
+  --color-button-text: #E1E3E4; /* Azul pálido */
+  --color-button-text-inactive: #6D7277; /* Azul pálido */
+  --color-button-icon: #1D9BF0;
+  --color-button-icon-inactive: #0B3D5E;
+  --color-button-menu-icon: #E7E9EA;
+  --color-primary-text: #E6E8E9;
+  --color-secondary-text:#6F7479;
+}
+html[data-theme="light"] {
+  --color-background: #FFFFFF; /* Blanco para un fondo claro */
+  --color-border: #D3D6D8; /* Gris claro */
+  --color-button-text: #1A1A1A; /* Negro para texto visible en botones */
+  --color-button-text-inactive: #888D91; /* Gris medio para texto inactivo */
+  --color-button-icon: #007ACC; /* Azul brillante para íconos activos */
+  --color-button-icon-inactive: #9ACAFD; /* Azul claro para íconos inactivos */
+  --color-button-menu-icon: #4A4A4A; /* Gris oscuro para íconos de menú */
+  --color-primary-text: #1A1A1A; /* Negro para texto principal */
+  --color-secondary-text: #5A5F63; /* Gris intermedio para texto secundario */
+}
+
 
 /* Otras reglas CSS */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
+@plugin '@tailwindcss/typography';
+
+@variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --color-background: var(--color-background);
+  --color-border: var(--color-border);
+  --color-button-text: var(--color-button-text);
+  --color-button-text-inactive: var(--color-button-text-inactive);
+  --color-button-icon: var(--color-button-icon);
+  --color-button-icon-inactive: var(--color-button-icon-inactive);
+  --color-button-menu-icon: var(--color-button-menu-icon);
+  --color-primary-text: var(--color-primary-text);
+  --color-secondary-text: var(--color-secondary-text);
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
 @layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
   body {
     @apply bg-background
   }
@@ -20,3 +70,4 @@
     @apply border-button-icon;
   }
 }
+
