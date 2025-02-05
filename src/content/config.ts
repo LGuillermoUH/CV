@@ -29,8 +29,8 @@ const Experience = defineCollection({
     })
 });
 const About = defineCollection({
-    // "content" type means we’re dealing with .md or .mdx files
-    type: 'content',
+    loader: glob({ pattern: '{[^_]*.md,**/[^_]*.md}'
+        , base: "./src/content/about" }),
     schema: z.object({
       title: z.string(),
       lang: z.string(),
