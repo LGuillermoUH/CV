@@ -1,0 +1,54 @@
+{
+  "lang": "en",
+  "experience": [
+    {
+      "id": 1,
+      "company": "m0sb1t",
+      "experience": [
+        {
+          "id": 1,
+          "title": "Frontend Developer for BEA's SaaS",
+          "duration": "February 2020 - December 2021",
+          "description": "Led the frontend implementation for a SaaS platform at BEA, using Google's libraries. Integrated sign-in with Microsoft Entra and developed user interfaces in React.",
+          "tags": ["React", "Google Libraries", "Microsoft Entra", "Frontend Development"]
+        },
+        {
+          "id": 2,
+          "title": "Full Stack Developer for Evalúa 365",
+          "duration": "January 2021 - December 2021",
+          "description": "Rebuilt the backend and frontend of the Evalúa 365 application for Compaqi. Used React and Tailwind for the frontend, and Node.js with Express and Sequelize for the backend. Implemented Excel data generation and import with Excel.js, dynamic drag-and-drop views, and MSAL React for authentication.",
+          "tags": ["React", "Tailwind", "Node.js", "Express", "Sequelize", "Excel.js", "MSAL React", "Full Stack Development"]
+        },
+        {
+          "id": 3,
+          "title": "Backend Developer at Compaqi Colabora",
+          "duration": "July 2023 - Present",
+          "description": "Designed and built REST APIs using .NET (Minimal API) and Entity Framework for the Compaqi Colabora project. Implemented design patterns such as Factory and Builder, and set up the initial project architecture. Integrated cloud services like Azure Blob Storage, Application Insights, Service Bus, and Azure Functions. Developed APIs for an attendance system with geolocation validation.",
+          "tags": [".NET", "Minimal API", "Entity Framework", "Factory Pattern", "Builder Pattern", "Azure Blob Storage", "Application Insights", "Service Bus", "Azure Functions", "Backend Development"]
+        },
+        {
+          "id": 4,
+          "title": "Backend Developer – Invoice & Policy Linking",
+          "duration": "November 2023 - December 2023",
+          "description": "Created APIs to link invoices with accounting policies using Cosmos DB and SQL. Implemented the CQRS pattern with Entity Framework and MediatR for improved data flow and separation of concerns.",
+          "tags": ["Cosmos DB", "SQL", "CQRS", "Entity Framework", "MediatR", "Backend Development"]
+        },
+        {
+          "id": 5,
+          "title": "Backend Developer – Legacy System Migration to REST",
+          "duration": "August 2024 - September 2024",
+          "description": "Migrated a legacy C# system to RESTful APIs for creating accounting accounts. Used FluentValidation for robust data validation.",
+          "tags": ["C#", "REST APIs", "FluentValidation", "Backend Development"]
+        },
+        {
+          "id": 6,
+          "title": "Backend Developer – Cloud-Based Excel Generation",
+          "duration": "September 2024 - October 2024",
+          "description": "Developed APIs to generate Excel files from templates stored in Blob Storage, using Nest.js and TypeScript, improving report creation and data management.",
+          "tags": ["Nest.js", "TypeScript", "Azure Blob Storage", "Excel Generation", "Backend Development"]
+        }
+      ],
+      "img": "mosbit"
+    }
+  ]
+}

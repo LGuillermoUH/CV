@@ -1,0 +1,26 @@
+---
+const { lang } = Astro.params;
+const isSpanish = lang === 'es';
+const targetLang = isSpanish ? 'en' : 'es';
+const newRoute = `/CV/${targetLang}`;
+---
+<!-- Agregamos un id para poder referenciar el enlace en el script -->
+<a id="lang-switch" class="p-2 text-center text-primary-text rounded-sm" href={newRoute}>
+  <p class="h-5 w-5 text-center">
+    {isSpanish ? 'Es' : 'En'}
+  </p>
+</a>
+
+<!-- Usamos "is:inline" para que Astro inyecte el código y procese las variables -->
+<script define:vars={{ targetLang }}>
+  // Esperamos a que el DOM esté completamente cargado
+  document.addEventListener('DOMContentLoaded', () => {
+    const langSwitch = document.getElementById('lang-switch');
+    if (langSwitch) {
+      langSwitch.addEventListener('click', () => {
+        // Actualizamos el valor en localStorage con el nuevo idioma
+        localStorage.setItem('lang', targetLang);
+      });
+    }
+  });
+</script>
