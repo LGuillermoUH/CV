@@ -1,8 +1,8 @@
 <button
   id="toggleTheme"
-  class="p-2 bg-primary-light dark:bg-primary rounded absolute right-0"
+  class="p-2 bg-primary-light dark:bg-primary rounded-sm"
 >
-  <img id="theme-icon" class="h-5 w-5" src="/src/components/Icons/dark.svg" alt="Theme Icon" />
+  <img id="theme-icon" class="h-5 w-5" src="./dark.svg" alt="Theme Icon" />
 </button>
 
 <script>
@@ -34,7 +34,7 @@
     document.querySelector("html")?.setAttribute("data-theme", newTheme);
 
     themeIcon.src = newTheme === 'dark'
-      ? '/src/components/Icons/dark.svg'
-      : '/src/components/Icons/light.svg';
+    ? './dark.svg'
+    : './light.svg';
   });
 </script>
