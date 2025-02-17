@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 const { lang } = Astro.params;
 const personalData = await getCollection('Personal',({data}) => data.lang == lang);
-console.log(personalData)
 ---
 
 <header class="mx-8 text-center p-6 my-auto ">
