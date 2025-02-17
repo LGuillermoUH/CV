@@ -36,4 +36,17 @@ const About = defineCollection({
       lang: z.string(),
     })
   });
-export const collections = {Technologies, Experience, About}
+
+  const Personal = defineCollection({
+    loader: glob({ pattern: '{[^_]*.md,**/[^_]*.md}'
+        , base: "./src/content/personal" }),
+    schema: z.object({
+      name: z.string(),
+      lang: z.string(),
+      career: z.string(),
+      knowledge: z.string(),
+      technologis: z.string(),
+    })
+  });
+
+export const collections = {Technologies, Experience, About, Personal}
