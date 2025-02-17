@@ -2,7 +2,7 @@
   id="toggleTheme"
   class="p-2 bg-primary-light dark:bg-primary rounded-sm"
 >
-  <img id="theme-icon" class="h-5 w-5" src="./dark.svg" alt="Theme Icon" />
+  <img id="theme-icon" class="h-5 w-5" src="../dark.svg" alt="Theme Icon" />
 </button>
 
 <script>
@@ -24,8 +24,8 @@
   document.querySelector("html")?.setAttribute("data-theme", initialTheme);
 
   themeIcon.src = initialTheme === 'dark'
-    ? './dark.svg'
-    : './light.svg';
+    ? '../dark.svg'
+    : '../light.svg';
 
   // Cambiar tema y actualizar el SVG
   button?.addEventListener('click', () => {
@@ -34,7 +34,7 @@
     document.querySelector("html")?.setAttribute("data-theme", newTheme);
 
     themeIcon.src = newTheme === 'dark'
-    ? './dark.svg'
-    : './light.svg';
+    ? '../dark.svg'
+    : '../light.svg';
   });
 </script>
